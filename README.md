@@ -1,4 +1,4 @@
-# Hello there! 😎
+# Hello there! <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
 ![Fei Wang's GitHub stats](https://github-readme-stats-sigma-five.vercel.app/api?username=silviafeiwang&show=reviews&count_private=true&show_icons=true&theme=dracula)
 
