@@ -4,9 +4,6 @@
 
 ![Fei Wang's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=silviafeiwang&count_private=true&show_icons=true&theme=dracula)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=silviafeiwang&layout=donut-vertical&show_icons=true&theme=dracula)
-
-
 <!--START_SECTION:waka-->
 
 <!--END_SECTION:waka-->
