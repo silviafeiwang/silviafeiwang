@@ -1,0 +1,23 @@
+name: Update profile guestbook
+
+on:
+  discussion_comment:
+    types: [created, edited, deleted]
+  workflow_dispatch:
+
+concurrency:
+  group: profile-guestbook
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      discussions: read
+    steps:
+      - uses: LISK819129/GitComment@v1
+        with:
+          discussion-number: 1
+          theme: minimal
+          variant: transparent
