@@ -9,13 +9,7 @@
 
 <!-- GITCOMMENT:START -->
 
-**Comments** — <sub>little messages from people passing by.</sub>
-
-<a href="https://github.com/XindanZhang"><img src="https://avatars.githubusercontent.com/u/179828463?s=80&amp;u=e707d591d40811af82e5da3eb2b5ecbc9d70101a&amp;v=4" width="20" height="20" alt="XindanZhang"></a> <a href="https://github.com/XindanZhang"><b>XindanZhang</b></a> <sub><span title="2026-11-08 05:42 UTC">8 Nov, 2026</span></sub><br>
-> heyyyyyy
-
-<a href="https://github.com/silviafeiwang"><img src="https://avatars.githubusercontent.com/u/35632332?s=80&amp;u=b6ab32ae8ab44c52087bbdff0c10b448958cb6d4&amp;v=4" width="20" height="20" alt="silviafeiwang"></a> <a href="https://github.com/silviafeiwang"><b>silviafeiwang</b></a> <sub><span title="2026-11-08 05:33 UTC">8 Nov, 2026</span></sub><br>
-> Ping myself...
+<a href="https://github.com/silviafeiwang/silviafeiwang/discussions/1"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/gitcomment/comments-dev-dark.svg?v=3d2c0bc9d5"><img src=".github/gitcomment/comments-dev-light.svg?v=56c2b5e127" alt="Comments" width="880"></picture></a>
 
 <sub><a href="https://github.com/silviafeiwang/silviafeiwang/discussions/1">leave a message</a></sub>
 
