@@ -19,5 +19,5 @@ jobs:
       - uses: LISK819129/GitComment@v1
         with:
           discussion-number: 1
-          theme: minimal
+          theme: dev
           variant: transparent
