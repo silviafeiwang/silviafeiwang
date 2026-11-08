@@ -1,6 +1,6 @@
 # Hello there! <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
-![Fei Wang's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=silviafeiwang&count_private=true&show_icons=true&theme=dracula)
+![Boo the Commit Pet](commit-pet.svg)
 
 <!--START_SECTION:waka-->
 
