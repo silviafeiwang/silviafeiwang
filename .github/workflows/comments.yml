@@ -4,6 +4,9 @@ on:
   discussion_comment:
     types: [created, edited, deleted]
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/comments.yml
 
 concurrency:
   group: profile-guestbook
@@ -21,3 +24,34 @@ jobs:
           discussion-number: 1
           theme: dev
           variant: transparent
+
+      - name: Check out the generated board
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Match the username accent to Dracula pink
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for variant in light dark; do
+            file=".github/gitcomment/comments-dev-${variant}.svg"
+            test -f "$file"
+
+            perl -0pi -e 's/(\.u \{[^}]*fill:\s*)#[0-9a-fA-F]{6}/$1#FF6E96/g' "$file"
+
+            cache_key="$(sha256sum "$file" | cut -c1-10)"
+            sed -E -i "s#(comments-dev-${variant}\.svg\?v=)[[:alnum:]]+#\1${cache_key}#g" README.md
+          done
+
+          if git diff --quiet; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/gitcomment/comments-dev-*.svg
+          git commit -m "comments: apply pink username accent"
+          git push origin HEAD:main
