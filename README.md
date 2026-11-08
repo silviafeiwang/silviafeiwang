@@ -11,4 +11,11 @@
 Leave a message or say hello!
 
 <!-- GITCOMMENT:START -->
+
+**Comments** — <sub>little messages from people passing by.</sub>
+
+> *no messages yet.*
+
+<sub><a href="https://github.com/silviafeiwang/silviafeiwang/discussions/1">leave a message</a></sub>
+
 <!-- GITCOMMENT:END -->
