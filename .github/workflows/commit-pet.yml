@@ -1,24 +1,24 @@
-name: Commit Pet
+name: Boo
 
+# Draws Boo's card with the same rules as the desktop app
+# (https://github.com/silviafeiwang/github-touchbar-pet), hourly so today's
+# count and streak stay current.
 on:
   schedule:
-    - cron: "17 8 * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
-  models: read
 
 jobs:
-  pet:
+  card:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: yukurash/commit-pet@v1
+      - uses: silviafeiwang/github-touchbar-pet@main
         with:
-          species: ghost
           name: Boo
+          species: ghost
+          timezone: America/Vancouver
           output: commit-pet.svg
-          theme: en
-          auto_merge: true
