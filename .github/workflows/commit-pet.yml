@@ -16,9 +16,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: silviafeiwang/github-touchbar-pet@main
-        with:
-          name: Boo
-          species: ghost
-          timezone: America/Vancouver
-          output: commit-pet.svg
+
+      - name: Get the card generator
+        run: git clone --depth 1 https://github.com/silviafeiwang/github-touchbar-pet.git "$RUNNER_TEMP/pet"
+
+      - name: Render card
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node "$RUNNER_TEMP/pet/profile-card/generate.js" \
+            --user silviafeiwang --name Boo --species ghost \
+            --tz America/Vancouver --out commit-pet.svg
+
+      - name: Commit card if it changed
+        run: |
+          git add commit-pet.svg
+          if git diff --cached --quiet; then
+            echo "Card unchanged."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update Boo 👻'
+          git push
