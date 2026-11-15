@@ -1,11 +1,11 @@
 name: Boo
 
 # Draws Boo's card with the same rules as the desktop app
-# (https://github.com/silviafeiwang/github-touchbar-pet), hourly so today's
+# (https://github.com/silviafeiwang/github-touchbar-pet), frequently so today's
 # count and streak stay current.
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,11 +26,12 @@ jobs:
         run: |
           node "$RUNNER_TEMP/pet/profile-card/generate.js" \
             --user silviafeiwang --name Boo --species ghost \
-            --tz America/Vancouver --out commit-pet.svg
+            --tz America/Vancouver --out commit-pet.svg \
+            --readme README.md
 
       - name: Commit card if it changed
         run: |
-          git add commit-pet.svg
+          git add commit-pet.svg README.md
           if git diff --cached --quiet; then
             echo "Card unchanged."
             exit 0
