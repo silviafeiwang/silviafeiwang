@@ -1,6 +1,6 @@
 # Hello there! <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
-![Boo the Commit Pet](commit-pet.svg?v=d387d028898a)
+![Boo the Commit Pet](commit-pet.svg?v=a0dfbcc8e7f2)
 
 <!--START_SECTION:waka-->
 
